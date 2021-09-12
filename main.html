@@ -286,6 +286,25 @@ STAGE3-2追加ここまで -->
         </section>
 
 STAGE3-3追加　ここまで -->
+        
+        <!-- STAGE1クリア画面　ここから -->
+        <!------------------------------------------------------------------------------------------------------
+          ステージを全問正解するとclear['stage1']がtrusになります。
+          v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
+          v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
+        -------------------------------------------------------------------------------------------------------->
+        <section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage3']}"  class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">Tutorial  クリア！</div>
+              <div class="clear-message__content">そうだった、この人の名前は拓也だった<br>
+                あっぶねぇ〜ド忘れしてたわん<br>
+                こんな平和な日々がずっと続くと思っていた。終わるだなんて思いもしていなかった。</div>
+              <button v-on:click="nextStage('stage3')" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
+        <!-- STAGE1クリア画面　ここまで -->       
 
           
       </div>
