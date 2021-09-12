@@ -238,7 +238,7 @@ Youtube貼り付けここまで -->
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
               4番目の引数 'final' は最終ステージを表します。
             ------------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1, 'final')"></answer-input>
+            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
             <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
           </div>
         </section>
@@ -290,6 +290,51 @@ STAGE3-3追加　ここまで -->
           
       </div>
       <!-- STAGE3　ここまで -->
+     
+      <!-- STAGE3　ここから -->
+      <div v-if="next['stage3']" id="sectionStage4" class="stage">
+
+        <!-- STAGE3-1問題セクション　ここから -->
+        <section class="section">
+          <div class="container">
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>愛の脆弱性</h2>
+            <p class="text-center">足枷が外れ、自由に動くことが可能になった拓也は真っ先に部屋の出口へと走った。<br>
+              画面には走っているのであろう拓也の足と<br>
+              冷たそうなコンクリートの床が強く揺れながら、映し出されている。<br>
+              すると、その揺れがが止まり、すぐ後に大きなため息が聞こえる。<br>
+              カメラの位置が上がり、映し出された扉の横には<br>
+              【パスワードを入力してください】の文字が表示されたタブレットと<br>
+              【2nd Question】と書かれた紙が貼り付けられている。<br>
+              <br>
+              「また謎を解かないといけないのかよ....」<br>
+              その言葉から拓也がどんな表情をしているのかは<br>
+              内カメラにしなくても、容易に想像ができた。</p>
+            <figure class="image__container">
+              <img src="assets/images/謎2 彼女 3.png" alt="">
+            </figure>
+          </div>
+        </section>
+        <!-- STAGE3-1問題セクション　ここまで -->
+
+        <!-- STAGE3-1解答入力セクションここから -->
+        <section class="section bg-color--keycolor">
+          <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
+            <!-----------------------------------------------------------------------------------------------------------------
+              解答入力欄のコンポーネントです。
+              v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
+              4番目の引数 'final' は最終ステージを表します。
+            ------------------------------------------------------------------------------------------------------------------>
+            <answer-input v-bind:correct="correctAnswer['stage4']['q1']" v-on:answer-input="answerInput($event, 'stage4', 1)"></answer-input>
+            <a class="link-hint" href="hint4.html" target="hint4">ヒントをみる ></a>
+          </div>
+        </section>
+        <!-- STAGE3-1解答入力セクション　ここまで -->
+
+          
+      </div>
+      <!-- STAGE3　ここまで -->
+
 
     </div>
   </main>
